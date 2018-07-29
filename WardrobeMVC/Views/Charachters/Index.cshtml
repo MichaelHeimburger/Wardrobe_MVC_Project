@@ -1,0 +1,35 @@
+﻿@model IEnumerable<WardrobeMVC.Models.Charachter>
+
+@{
+                /**/
+
+                ViewBag.Title = "Index";
+}
+
+<h1>Availible Models</h1>
+
+<a href=@Url.Action("Charachters","Create")> Not what you were looking for? Upload your picture! </a>
+<hr />
+<div class="rolodex">
+    @foreach (var item in Model)
+    {
+
+        <div class="cardinfo">
+            <img src=@Url.Content(item.Photo) alt="Avatar">
+            <div class="cardtextcontainer">
+                <div>
+                    <h4><b> @Html.DisplayFor(modelItem => item.CharachterName)</b></h4>
+                   <a class="cardlinks" href= @Url.Action( "Edit", new { id = item.CharachterID }) >Edit</a> 
+                   <a class="cardlinks" href=@Url.Action( "Details", new { id = item.CharachterID }) >Details</a>
+                 <a class="cardlinks"href=   @Url.Action( "Delete", new { id = item.CharachterID }) >Delete</a>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+
+<h1 style="margin-top:100px">Ready To make your outfit?</h1>
+<a href=@Url.Action("OutfitNames","Create") >Lets Go!</a>
+
+

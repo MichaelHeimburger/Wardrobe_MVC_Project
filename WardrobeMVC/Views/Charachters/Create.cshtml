@@ -1,0 +1,52 @@
+﻿@model WardrobeMVC.Models.Charachter
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+<h4>Choose your photo</h4>
+<hr />
+<div class="row charachtercreaterow">
+    <div class="col">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    <p>  Your Name</p>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.CharachterName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CharachterName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <p>Photo Link</p>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Photo, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Photo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        }
+
+
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }
+    </div>
+<div class="col">
+    <h2>Upload your photo to an image hosting site and paste the link here. We reccomend a 360 x 922 pixel size for optimal results.</h2>
+
+</div>
+</div>

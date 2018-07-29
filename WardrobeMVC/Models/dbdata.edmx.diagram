@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f4634e2bbf0a4f04b4b07f44cd7192ce" Name="Diagram1">
+        <EntityTypeShape EntityType="WardrobeMVCModel.Accessory" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeMVCModel.Bottom" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeMVCModel.OutfitName" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeMVCModel.OutfitPart" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeMVCModel.Shoe" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeMVCModel.sysdiagram" Width="1.5" PointX="7.5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeMVCModel.Top" Width="1.5" PointX="0.75" PointY="13.5" IsExpanded="true" />
+        <AssociationConnector Association="WardrobeMVCModel.FK_OutfitPart_Accessory" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeMVCModel.FK_OutfitPart_Bottom" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeMVCModel.FK_OutfitPart_OutfitName" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeMVCModel.FK_OutfitPart_Shoe" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeMVCModel.FK_OutfitPart_Top" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="WardrobeMVCModel.Charachter" Width="1.5" PointX="0.75" PointY="16.25" />
+        <AssociationConnector Association="WardrobeMVCModel.FK_OutfitName_Charachter" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

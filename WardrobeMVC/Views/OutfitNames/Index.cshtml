@@ -1,0 +1,37 @@
+﻿@model IEnumerable<WardrobeMVC.Models.OutfitName>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+    @foreach (var item in Model)
+    {
+
+        <div class="cardinfo">
+            <img src=@Url.Content(item.Charachter.Photo) alt="Avatar">
+            <div class="cardtextcontainer">
+                <div>
+                    <h4> @Html.DisplayFor(modelItem => item.Name)</h4>
+                    <h4><b>Season</b> @Html.DisplayFor(modelItem => item.Season)</h4>
+                    <h4><b>Occasion</b> @Html.DisplayFor(modelItem => item.Occasion)</h4>
+                    <a class="cardlinks" href=@Url.Action( "Details", new { id = item.OutfitID })>View</a>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+                @*@Html.ActionLink("Edit", "Edit", new { id = item.OutfitID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.OutfitID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.OutfitID })*@
+
+    }

@@ -1,0 +1,116 @@
+﻿
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+footer{
+    height:100%
+}
+
+
+/*<-------------------------------------------------- MY CSS -------------------------------->*/
+body {
+    background: linear-gradient(to bottom right, #fffdd0 -200%, #ffcc99 200%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    min-height: 900px;
+}
+.navbarheadertext {
+    font-family: 'Bungee Hairline', cursive;
+    color: ghostwhite;
+    margin-left: 25vw;
+    font-size: 4vw;
+}
+.logo{
+    height:5vw;
+}
+
+
+/*<-------------------------------------------------- HOME PAGE-------------------------------->*/
+.indexRowOne {
+    /*background-image: url('../Images/closetone.jpg');
+    background-repeat: no-repeat;
+    background-position:center;*/
+    height: auto;
+    background-size: contain;
+    display:flex;
+    justify-content:space-around;
+    margin-left:5vw;
+    margin-right:5vw;
+    position:relative;
+}
+.indexColOne{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+.indexRowOnetext {
+    color: floralwhite;
+    font-size: 4vw;
+    font-weight: 900;
+    text-shadow: 6px -1px 2px rgba(255, 210, 150, 1);
+}
+.indexcara{
+    height:20vw;
+    position:center;
+
+}
+.indexRowOnetextTwo:hover{
+    text-decoration:none;
+    color:white;
+}
+.indexColTwo {
+    height: auto;
+    margin: 2vw;
+    box-shadow: 6px -1px 2px rgba(255, 210, 150, 1);
+}
+
+/*<-------------------------------------------------- Charahcters  PAGES-------------------------------->*/
+
+.charachtercreaterow{
+    height:70vw;
+    min-height:900px;
+}
+
+/*<-------------------------------------------------- Card for displaying data  PAGES-------------------------------->*/
+.cardinfo {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width:auto;
+    margin:1vw;
+    display:flex;
+    justify-content:center;
+}
+.cardinfo img{
+    height:300px;
+}
+    /* On mouse-over, add a deeper shadow */
+    .cardinfo:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+
+/* Add some padding inside the card container */
+.cardtextcontainer {
+    padding: 2px 16px;
+}
+.rolodex{
+    display:flex;
+}
