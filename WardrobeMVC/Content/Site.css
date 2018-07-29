@@ -114,3 +114,14 @@ body {
 .rolodex{
     display:flex;
 }
+/*<-------------------------------------------------- OutfitDetails Page-------------------------------->*/
+.gridcontainer{
+    display:grid;
+    grid-template-rows:1fr;
+    grid-template-columns:1fr;
+
+}
+.outfitshow{
+    grid-column:1 /span 1;
+    grid-row 1 /span 1;
+}

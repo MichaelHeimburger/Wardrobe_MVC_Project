@@ -75,7 +75,7 @@
           <Key>
             <PropertyRef Name="TopID" />
           </Key>
-          <Property Name="TopID" Type="int" Nullable="false" />
+          <Property Name="TopID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ItemName" Type="nvarchar" MaxLength="50" />
           <Property Name="Photo" Type="nvarchar" MaxLength="200" />
           <Property Name="Color" Type="nvarchar" MaxLength="50" />

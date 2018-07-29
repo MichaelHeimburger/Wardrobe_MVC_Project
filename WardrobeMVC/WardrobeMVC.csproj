@@ -322,11 +322,6 @@
     <Content Include="Views\Shoes\Details.cshtml" />
     <Content Include="Views\Shoes\Edit.cshtml" />
     <Content Include="Views\Shoes\Index.cshtml" />
-    <Content Include="Views\Tops\Create.cshtml" />
-    <Content Include="Views\Tops\Delete.cshtml" />
-    <Content Include="Views\Tops\Details.cshtml" />
-    <Content Include="Views\Tops\Edit.cshtml" />
-    <Content Include="Views\Tops\Index.cshtml" />
     <Content Include="Views\Charachters\Create.cshtml" />
     <Content Include="Views\Charachters\Delete.cshtml" />
     <Content Include="Views\Charachters\Details.cshtml" />
@@ -338,6 +333,11 @@
     <Content Include="Views\OutfitNames\Edit.cshtml" />
     <Content Include="Views\OutfitNames\Index.cshtml" />
     <Content Include="Views\Home\Tutorial.cshtml" />
+    <Content Include="Views\Tops\Create.cshtml" />
+    <Content Include="Views\Tops\Delete.cshtml" />
+    <Content Include="Views\Tops\Details.cshtml" />
+    <Content Include="Views\Tops\Edit.cshtml" />
+    <Content Include="Views\Tops\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

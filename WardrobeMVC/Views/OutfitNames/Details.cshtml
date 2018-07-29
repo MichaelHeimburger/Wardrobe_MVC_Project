@@ -1,51 +1,73 @@
-﻿@model WardrobeMVC.Models.OutfitName
+﻿@model WardrobeMVC.Models.FullOutfit
 
 @{
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>OutfitName</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+<h4 class="indexRowOnetext">@Url.Content(Model.Name)</h4>
+<hr />
+<div class="gridcontainer">
+    <img class="outfitshow" src=@Url.Content(Model.Actor) />
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Season)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Season)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Occasion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Occasion)
-        </dd>
-      
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Charachter.CharachterName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Charachter.CharachterName)
-        </dd>
-
-    </dl>
+    @foreach (var item in Model.Tops)
+    {
+        <img class="outfitshow" src=@Url.Content(item.Photo) />
+    }
+    <!---->
+    @foreach (var item in Model.Bottoms)
+    {
+        <img class="outfitshow" src=@Url.Content(item.Photo) />
+    }
+    <!---->
+    @foreach (var item in Model.Sheos)
+    {
+        <img class="outfitshow" src=@Url.Content(item.Photo) />
+    }
+    <!---->
+    @foreach (var item in Model.Accessories)
+    {
+        <img class="outfitshow" src=@Url.Content(item.Photo) />
+    }
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.OutfitID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<!---->
+@*<dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Season)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Season)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Occasion)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Occasion)
+            </dd>
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Charachter.CharachterName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Charachter.CharachterName)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.OutfitID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@

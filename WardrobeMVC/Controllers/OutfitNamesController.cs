@@ -30,7 +30,19 @@ namespace WardrobeMVC.Controllers
             }
             OutfitName outfitName = db.OutfitNames.Find(id);
             FullOutfit fullOutfit = new FullOutfit();
-            fullOutfit.OutfitParts = (from c in db.OutfitParts where c.OutfitID.Equals(id) select c).ToList();
+            fullOutfit.OutfitParts = (from c in db.OutfitParts where c.OutfitID==(id) select c).ToList();
+            fullOutfit.Sheos = (from c in db.OutfitParts where c.OutfitID==(id) select c.Shoe).ToList();
+            fullOutfit.Tops = (from c in db.OutfitParts where c.OutfitID==(id) select c.Top).ToList();
+            fullOutfit.Accessories = (from c in db.OutfitParts where c.OutfitID==(id) select c.Accessory).ToList();
+            fullOutfit.Bottoms = (from c in db.OutfitParts where c.OutfitID==(id) select c.Bottom).ToList();
+            fullOutfit.Name = outfitName.Name;
+            fullOutfit.Occasion = outfitName.Occasion;
+            fullOutfit.Season = outfitName.Season;
+            fullOutfit.Actor = outfitName.Charachter.Photo;
+            //foreach (OutfitPart p in fullOutfit.OutfitParts)
+            //{
+            //    fullOutfit.Tops.Add((from c in db.Tops where c.OutfitParts.Equals(p) select c));
+            //}
             if (outfitName == null)
             {
                 return HttpNotFound();

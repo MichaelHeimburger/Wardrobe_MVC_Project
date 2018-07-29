@@ -14,6 +14,9 @@ namespace WardrobeMVC.Models
         public List<Shoe> Sheos { get; set; }
         public List<Accessory> Accessories { get; set; }
         public List<OutfitPart> OutfitParts { get; set; }
-        public List<string> Photos { get; set; }
+        public string Name { get; set; }
+        public string Season { get; set; }
+        public string Occasion { get; set; }
+        public string Actor { get; set; }
     }
 }
