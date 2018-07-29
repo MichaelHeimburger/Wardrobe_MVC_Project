@@ -7,8 +7,13 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Add Another Part", "Create")
 </p>
+<p>
+    Assign parts together with matching outfit ids
+</p>
+<a href=@Url.Action("Index","OutfitNames")>View all Outfits</a> ||
+<a href=@Url.Action("Home","Tutorial")>Back to Sitemap</a>
 <table class="table">
     <tr>
         <th>
@@ -29,29 +34,30 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Accessory.ItemName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Bottom.ItemName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OutfitName.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Shoe.ItemName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Top.ItemName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.OutfitPartID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.OutfitPartID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.OutfitPartID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Accessory.ItemName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bottom.ItemName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OutfitName.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Shoe.ItemName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Top.ItemName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.OutfitPartID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.OutfitPartID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.OutfitPartID })
+            </td>
+        </tr>
+    }
 
 </table>

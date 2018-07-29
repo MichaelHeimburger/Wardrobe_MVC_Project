@@ -2,7 +2,28 @@
 @{
     ViewBag.Title = "Tutorial";
 }
+<div class="sitemaprowone">
+    <h1>Site Map</h1>
 
+</div>
 
+<div class="row">
+    <div class="col">
+        <h2>Clothes</h2>
+        <ul>
+            <li>    <a class="sitemaplinks" href=@Url.Action("Index","Tops")>Go to Tops</a></li>
+            <li>    <a class="sitemaplinks" href=@Url.Action("Index","Bottoms")>Go to Bottoms</a></li>
+            <li>    <a class="sitemaplinks" href=@Url.Action("Index","Accessories")>Go to Accessories</a></li>
+            <li>    <a class="sitemaplinks" href=@Url.Action("Index","Shoes")>Go to Shoes</a></li>
+        </ul>
+    </div>
+    <div class="col">
+        <h2>Outfits</h2>
+        <ul>
+        <li>    <a class="sitemaplinks" href=@Url.Action("Index","OutfitNames")>Go to All Outfits</a></li>
+        <li>    <a class="sitemaplinks" href=@Url.Action("Index","OutfitParts")>Edit Outfit Parts</a></li>
+        </ul>
 
+    </div>
 
+</div>

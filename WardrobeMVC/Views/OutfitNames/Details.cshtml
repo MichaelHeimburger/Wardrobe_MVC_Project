@@ -8,28 +8,58 @@
 
 <h4 class="indexRowOnetext">@Url.Content(Model.Name)</h4>
 <hr />
-<div class="gridcontainer">
-    <img class="outfitshow" src=@Url.Content(Model.Actor) />
+<div class="row">
+    <div class="col">
+        <div class="gridcontainer">
+            <img class="outfitshow" src=@Url.Content(Model.Actor) />
 
-    @foreach (var item in Model.Tops)
-    {
-        <img class="outfitshow" src=@Url.Content(item.Photo) />
-    }
-    <!---->
-    @foreach (var item in Model.Bottoms)
-    {
-        <img class="outfitshow" src=@Url.Content(item.Photo) />
-    }
-    <!---->
-    @foreach (var item in Model.Sheos)
-    {
-        <img class="outfitshow" src=@Url.Content(item.Photo) />
-    }
-    <!---->
-    @foreach (var item in Model.Accessories)
-    {
-        <img class="outfitshow" src=@Url.Content(item.Photo) />
-    }
+            @foreach (var item in Model.Tops)
+            {
+                <img class="outfitshow" src=@Url.Content(item.Photo) />
+            }
+            <!---->
+            @foreach (var item in Model.Bottoms)
+            {
+                <img class="outfitshow" src=@Url.Content(item.Photo) />
+            }
+            <!---->
+            @foreach (var item in Model.Sheos)
+            {
+                <img class="outfitshow" src=@Url.Content(item.Photo) />
+            }
+            <!---->
+            @foreach (var item in Model.Accessories)
+            {
+                <img class="outfitshow" src=@Url.Content(item.Photo) />
+            }
+        </div>
+    </div>
+    <div class="col outfitdetails">
+        <h2>Tops in this outfit:</h2>
+        @foreach (var item in Model.Tops)
+        {
+            <p>@Url.Content(item.ItemName)</p>
+        }
+        <h2>Bottoms in this outfit:</h2>
+        @foreach (var item in Model.Bottoms)
+        {
+            <p>@Url.Content(item.ItemName)</p>
+        }
+        <h2>Accessories in this outfit:</h2>
+        @foreach (var item in Model.Accessories)
+        {
+            <p>@Url.Content(item.ItemName)</p>
+        }
+        <h2>Shoes in this outfit:</h2>
+        @foreach (var item in Model.Sheos)
+        {
+            <p>@Url.Content(item.ItemName)</p>
+        }
+
+        <a href=@Url.Action("Create","OutfitParts")>Add Another Part</a> ||
+        <a href=@Url.Action("Tutorial","Home")>Go to clothes index</a>
+
+    </div>
 </div>
 <!---->
 @*<dt>

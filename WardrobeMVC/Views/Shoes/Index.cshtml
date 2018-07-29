@@ -9,37 +9,26 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ItemName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Color)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Photo)
-        </th>
-        <th></th>
-    </tr>
+<a href=@Url.Action("Tutorial","Home")>Go to the Sitemap to assemble the rest of the outfit</a>
+<div class="rolodex">
+    @foreach (var item in Model)
+    {
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ItemName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Color)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Photo)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ShoeID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ShoeID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ShoeID })
-        </td>
-    </tr>
-}
+        <div class="cardinfo">
+            <div class="cardframe">
 
-</table>
+                <img class="cardphoto" src="~/Images/chad.png" />
+                <img class="cardphoto" src=@Url.Content(item.Photo) alt="Avatar">
+            </div>
+            <div class="cardtextcontainer">
+                <div>
+                    <h4><b> @Html.DisplayFor(modelItem => item.ItemName)</b></h4>
+                    <a class="cardlinks" href=@Url.Action( "Edit", new { id = item.ShoeID })>Edit</a>
+                    <a class="cardlinks" href=@Url.Action( "Details", new { id = item.ShoeID })>Details</a>
+                    <a class="cardlinks" href=@Url.Action( "Delete", new { id = item.ShoeID })>Delete</a>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
