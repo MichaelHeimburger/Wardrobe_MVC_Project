@@ -55,7 +55,10 @@
         {
             <p>@Url.Content(item.ItemName)</p>
         }
-
+        <h2>Season:</h2>
+        <p>@Url.Content(Model.Season)</p>
+        <h2>Occasion</h2>
+        <p>@Url.Content(Model.Occasion)</p>
         <a href=@Url.Action("Create","OutfitParts")>Add Another Part</a> ||
         <a href=@Url.Action("Tutorial","Home")>Go to clothes index</a>
 
